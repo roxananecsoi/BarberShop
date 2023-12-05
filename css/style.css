@@ -9,6 +9,17 @@
 }
 
 /*Global Styles*/
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+*{
+  margin: 0;
+}
+
 body {
   font-family: var(--text-font-family);
 }
@@ -22,6 +33,9 @@ ul {
 }
 
 /* Classes*/
+.hero-section{
+
+}
 
 .social-media-link {
   color: var(--black-color);
@@ -72,9 +86,11 @@ ul {
 }
 
 .book-service-button {
-  background-color: rgba(0, 0, 0, 0);
-  color: var(--white-color);
-  border-color: var(--brand-color);
+  background: none;
+  border-radius: 25px;
+  border: 1px solid var(--brand-color);
+  padding: 12px 24px;
+
   font-size: 12px;
   font-style: normal;
   font-weight: 600;
@@ -84,17 +100,18 @@ ul {
   cursor: pointer;
 }
 
-.book-service-button-dark {
-  color: var(--black-color);
-}
-
 .book-service-button-light {
   color: var(--white-color);
 }
 
+.book-service-button-dark {
+  color: var(--black-color);
+}
+
 .book-service-button:hover,
 .book-service-button:focus {
-  color: var(--brand-color);
+  color: var(--white-color);
+  background-color: var(--brand-color);
 }
 
 .subtitle {
