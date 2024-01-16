@@ -1,8 +1,15 @@
 .why-us {
-  height: 582px;
-  padding: 130px 155px;
+  padding: var(--padding-vertical-global) var(--padding-horizontal-global);
   display: flex;
-  gap: 130px;
+  flex-direction: column-reverse;
+  gap: 44px;
+}
+
+.why-us-title-container {
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .why-us-cards {
@@ -10,6 +17,7 @@
   display: flex;
   flex-wrap: wrap;
   column-gap: 30px;
+  margin-left: auto;
 
   max-width: calc(var(--card-width) * 2 + 30px);
 }
@@ -54,4 +62,15 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+}
+
+@media screen and (width >= 1158px) {
+  .why-us {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .why-us-cards {
+    margin-left: 0;
+  }
 }

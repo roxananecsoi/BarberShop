@@ -4,6 +4,9 @@
   --white-color: #ffffff;
   --gray-color: rgba(157, 164, 189, 0.6);
 
+  --padding-vertical-global: 84px;
+  --padding-horizontal-global: 31px;
+
   --content-color: #555;
 
   --text-font-family: "Open Sans", sans-serif;
@@ -38,6 +41,11 @@ ul {
   list-style-type: none;
   padding: 0;
 }
+
+/* img {
+  display: block;
+  max-width: 100%;
+} */
 
 /* Classes */
 .modal {
@@ -81,12 +89,12 @@ ul {
 }
 
 .nav-link {
-  color: var(--white-color);
-  font-size: 12px;
+  color: var(--black-color);
+  font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.8px;
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -94,12 +102,12 @@ ul {
 }
 
 .address-phone-number {
-  color: var(--white-color);
-  font-size: 12px;
+  color: var(--black-color);
+  font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.8px;
   text-transform: uppercase;
 }
 
@@ -163,10 +171,10 @@ ul {
 
 .header {
   font-family: var(--header-font-family);
-  font-size: 42px;
+  font-size: 28px;
   font-style: normal;
   line-height: normal;
-  letter-spacing: 2.1px;
+  letter-spacing: 1.4px;
 }
 
 .header-dark {
@@ -175,4 +183,34 @@ ul {
 
 .header-light {
   color: var(--white-color);
+}
+
+@media screen and (width >= 768px) {
+  :root {
+    --padding-vertical-global: 100px;
+    --padding-horizontal-global: 39px;
+  }
+}
+
+@media screen and (width >= 1158px) {
+  :root {
+    --padding-vertical-global: 130px;
+    --padding-horizontal-global: 55px;
+  }
+  .header {
+    font-size: 42px;
+    letter-spacing: 2.1px;
+  }
+
+  .nav-link {
+    color: white;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+  }
+
+  .address-phone-number {
+    color: white;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+  }
 }
